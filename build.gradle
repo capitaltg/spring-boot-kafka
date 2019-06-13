@@ -1,0 +1,25 @@
+plugins {
+    id 'checkstyle'
+    id 'eclipse'
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+  compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.26'
+  
+  compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.0.5.RELEASE'
+  compile group: 'org.springframework.kafka', name: 'spring-kafka', version: '2.0.5.RELEASE'
+  testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.0.5.RELEASE'
+}
+
+mainClassName = 'com.capitaltg.kafka.App'
+
+checkstyle {
+  toolVersion = '7.8.2'
+  maxWarnings = 0
+}
